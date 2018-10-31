@@ -1,4 +1,6 @@
 <%=@user.name%>
+<%if @user.happiness && @user.nausea%>
 Mood <%=@user.happiness > @user.nausea ? "happy" : "not"%>
+<%end%>
 Tickets <%=@user.tickets%>
 Height <%=@user.height%>
