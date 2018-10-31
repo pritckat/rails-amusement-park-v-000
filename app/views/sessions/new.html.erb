@@ -5,6 +5,8 @@
 <%= f.submit 'Sign In'%>
 <%= form_for @user do |f| %>
 <%= f.collection_select :name, User.all, :id, :name %>
+<%end%>
 <%=f.text_field :password %>
+
 <%= f.submit %>
 <%end%>
