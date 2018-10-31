@@ -1,12 +1,10 @@
-<<<<<<< HEAD
+
 <%= form_for @user, url: url_for(controller: 'sessions', action: 'create') do |f| %>
 <%= f.collection_select :name, User.all, :id, :name %>
 <%= f.password_field :password %>
 <%= f.submit 'Sign In'%>
-=======
 <%= form_for @user do |f| %>
 <%= f.collection_select :name, User.all, :id, :name %>
 <%=f.text_field :password %>
 <%= f.submit %>
->>>>>>> 8fb8b8ed9a221b29a8a6e44c2fbe88db41111fc3
 <%end%>
