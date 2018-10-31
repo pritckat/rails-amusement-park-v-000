@@ -6,11 +6,16 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by(name: params[:user][:name])
+<<<<<<< HEAD
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
       redirect_to user_path(@user), notice: "Welcome back to the theme park!"
     else
       redirect_to signin_path
     end
+=======
+    session[:user_id] = @user.id
+    redirect_to user_path(@user)
+>>>>>>> 8fb8b8ed9a221b29a8a6e44c2fbe88db41111fc3
   end
 end
