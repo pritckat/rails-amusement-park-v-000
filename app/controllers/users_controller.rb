@@ -11,11 +11,10 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
     if !!session[:user_id]
       redirect_to '/'
-    else
-    @user = User.find(params[:id])
-  end
+    end
   end
 
   private
