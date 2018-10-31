@@ -1,4 +1,5 @@
 
+Sign Up
 <%= form_for @user, url: url_for(controller: 'sessions', action: 'create') do |f| %>
 <%= f.collection_select :name, User.all, :id, :name %>
 <%= f.password_field :password %>
